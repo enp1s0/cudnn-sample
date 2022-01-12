@@ -44,6 +44,8 @@ int main() {
 	cudnnDestroyTensorDescriptor(a_tensor_desc);
 	cudnnDestroyTensorDescriptor(b_tensor_desc);
 
+	cudnnDestroy(cudnn_handle);
+
 	cudaFree(dA);
 	cudaFree(dB);
 }
